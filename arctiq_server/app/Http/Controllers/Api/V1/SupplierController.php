@@ -58,7 +58,10 @@ class SupplierController extends Controller
      */
     public function destroy(Supplier $supplier)
     {
-        //
+        $supplier->delete();
+        return response()->json([
+            'message' => 'Supplier deleted successfully'
+        ]);
     }
 }
  
